@@ -1,0 +1,6 @@
+{% extends "dbView/header.html" %}
+{% block content %}
+	{% for Exercise in object_list %}
+	<h5> <a href ="/dbview/{{Exercise.id}}"> {{Exercise.id}} </a> {{ Exercise.activityType }} {{ Exercise.zipcode }} {{ Exercise.difficultyrating }} </h5>
+	{% endfor %}
+{% endblock %}
