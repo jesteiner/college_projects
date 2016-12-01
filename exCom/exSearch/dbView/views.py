@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, render_to_response
+from django.http import Http404, HttpResponse, HttpResponseRedirect
 from .models import Exercise
 from .forms import PostForm
 
@@ -14,3 +15,14 @@ def post_new(request):
 		form = PostForm()
 
 	return render(request, 'dbView/post_edit.html', {'form': form})
+
+def main(request):
+	return render(request, 'dbView/main.html')
+
+#def search(request):
+#
+ #   if request.POST:
+#	uInput = request.POST['term']
+#	return HttpResponseRedirect("/")
+ #   else:
+#	return render_to_response('search.html')
