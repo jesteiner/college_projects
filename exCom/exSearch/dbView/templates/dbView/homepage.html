@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>Exercise in the Community</title>
+	<meta charset="utf-8" />
+	{% load staticfiles %}
+	<link rel="stylesheet" href="{% static 'personal/css/bootstrap.min.css' %}" type = "text/css"/>
+	<meta name="viewport" content = "width=device-width, initial-scale=1.0">
+	
+	<style type="text/css">
+		html,
+		body {
+		  height:100%
+		}
+	</style>
+</head>
+
+<body class="body" style="background-color:#f6f6f6">
+	<div class="container-fluid" style="min-height:95%; ">
+		<div class="row">
+			  
+			  <div class="col-sm-10">
+				  <br>
+				  <center>
+				  <h3>Welcome Home!</h3>
+				  </center>
+			  </div>
+		</div><hr>
+
+		<div class="row">
+		  <div class="col-sm-2">
+		  <br>
+
+		  <br>
+		   <!-- Great, til you resize. -->
+			<!--<div class="well bs-sidebar affix" id="sidebar" style="background-color:#fff">-->
+			<div class="well bs-sidebar" id="sidebar" style="background-color:#fff">
+			  <ul class="nav nav-pills nav-stacked">
+				<li><a href='/'>Search for an Activity</a></li>
+				<li><a href='/'>Review an Activity</a></li>
+				 <li><a href='/'>Help</a></li>
+			  </ul>
+			</div> <!--well bs-sidebar affix-->
+		  </div> <!--col-sm-2-->
+		  <div class="col-sm-10">
+            <h4>Recent Activities:</h4>
+            <ul>
+              <li>Biking</li>
+              <li>Hiking</li>
+              <li>Swimming</li>
+            </ul>
+            <h4>Recent Reviews:</h4>
+            <ul>
+              <li>"The bike trails were not very challenging, anyone could do this. The scenery was lovely too!"</li> <button name="edit" type="edit" value="edit">Edit</button>
+              <li>"The hiking is really rough here. It's not for a beginner."</li> <button name="edit" type="edit" value="edit">Edit</button>
+              <li>"Don't go to this pool! It's disgusting"</li> <button name="edit" type="edit" value="edit">Edit</button>
+            </ul>
+			<div class='container-fluid'>
+			<br><br>
+			   {% block content %}
+			   {% endblock %}	
+			</div>
+		  </div>
+		</div> 
+	</div>
+  
+	
+	
+</body>
+
+</html>
