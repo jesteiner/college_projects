@@ -19,6 +19,17 @@ def post_new(request):
 def main(request):
 	return render(request, 'dbView/main.html')
 
+def home(request):
+	return render(request, 'dbView/homepage.html')
+
+def activity(request):
+	return render(request, 'dbView/activitypage.html')
+
+def results(request):
+	return render(request, 'dbView/searchresults.html')
+
+
+
 #def search(request):
 #
  #   if request.POST:
